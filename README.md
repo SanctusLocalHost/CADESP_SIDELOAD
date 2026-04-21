@@ -18,7 +18,7 @@
 
 ## Funcionalidade
 
-Ao contrário de simples consultores cadastrais, esta ferramenta foi desenhada para fluxos de trabalho de **Ethical Hacking** e **Investigação Digital**:
+Ferramenta desenhada para fluxos de trabalho de **Ethical Hacking** e **Investigação Digital**:
 
 * **Agregação Multicamadas:** Consulta simultânea em diversos mirrors (BrasilAPI, ReceitaWS, CNPJ.ws, MinhaReceita).
 * **Intelligence Classification:** Motor interno que analisa CNAEs e Razão Social para classificar automaticamente o perfil operacional do alvo (Indústria, Comércio, etc.).
