@@ -1,6 +1,6 @@
 # Consulta Estruturada de Database - Cadastro de Contribuintes
 
-Este é um software desenvolvido em Python com interface gráfica (GUI) baseada em `customtkinter`. O objetivo da aplicação é realizar consultas de Dados Cadastrais de Empresas (contribuintes do ICMS) utilizando o CNPJ ou a Inscrição Estadual, integrando os resultados de diversas APIs públicas.
+O Software realiza consultas de Dados Cadastrais de Empresas (contribuintes do ICMS) utilizando o CNPJ ou a Inscrição Estadual, integrando os resultados de diversas APIs públicas.
 
 ---
 
