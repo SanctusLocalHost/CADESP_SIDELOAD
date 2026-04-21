@@ -1,74 +1,61 @@
-# Consulta Estruturada de Database - Cadastro de Contribuintes
+# CADESP_SIDELOAD | OSINT Framework
 
-O Software realiza consultas de Dados Cadastrais de Empresas (contribuintes do ICMS) utilizando o CNPJ ou a Inscrição Estadual, integrando os resultados de diversas APIs públicas.
+![Status](https://img.shields.io/badge/Status-Project%20Alpha-green?style=for-the-badge)
+![Language](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Focus](https://img.shields.io/badge/Focus-OSINT%20%26%20Recon-black?style=for-the-badge&logo=hackthebox&logoColor=green)
 
----
-
-## Interface
-
-<img width="1052" height="982" alt="image" src="https://github.com/user-attachments/assets/e86b97ff-7293-4d0f-8c0d-e72d41e55c55" />
-
+**CADESP_SIDELOAD** é uma ferramenta de **OSINT (Open Source Intelligence)** focada em reconhecimento corporativo e inteligência de dados cadastrais. Ela automatiza a coleta de dados de empresas brasileiras através de múltiplas camadas de APIs públicas, estruturando payloads brutos em relatórios de inteligência.
 
 ---
 
-## Funcionalidades Principais
+## Funcionalidade
 
-- **Múltiplas APIs Integradas:** Suporte para BrasilAPI, ReceitaWS, CNPJ.ws e MinhaReceita.
-- **Tipos de Busca:** Consulta por CNPJ ou Inscrição Estadual (focada em SP via BrasilAPI).
-- **Interface Terminal:** Exibição dos dados brutos e tratados em uma interface escura inspirada em terminais de linha de comando, incluindo barra de progresso e efeito máquina de escrever.
-- **Motor de Busca Interno:** Ferramenta de localização de texto (Ctrl+F) embutida no terminal de exibição com destaque de resultados e navegação.
-- **Tratamento de Dados:** Achatamento automático de dicionários JSON complexos para visualização em lista.
-- **Classificação Automática:** Identificação do perfil da empresa (Indústria, Comércio, ambos ou outros) baseada em palavras-chave da razão social e atividades.
-- **Exportação em PDF:** Geração de relatórios PDF organizados por categorias (Empresa, Contato, Tributário, Sócios, etc.), salvos automaticamente na pasta Downloads.
+Ao contrário de simples consultores cadastrais, esta ferramenta foi desenhada para fluxos de trabalho de **Ethical Hacking** e **Investigação Digital**:
 
-## Pré-requisitos e Dependências
+* **Agregação Multicamadas:** Consulta simultânea em diversos mirrors (BrasilAPI, ReceitaWS, CNPJ.ws, MinhaReceita).
+* **Intelligence Classification:** Motor interno que analisa CNAEs e Razão Social para classificar automaticamente o perfil operacional do alvo (Indústria, Comércio, etc.).
+* **Mapeamento de Superfície:** Identificação rápida de Sócios (QSA), Capital Social e endereços para construção de diagramas de relacionamento.
+* **Exportação Forense:** Geração de relatórios PDF organizados por categorias (Tributário, Contato, Sócios) para documentação de evidências.
 
-Para rodar o software, você precisa do Python 3 instalado em seu computador. As bibliotecas de terceiros necessárias são:
+---
 
-- `customtkinter`
-- `requests`
-- `pandas`
-- `openpyxl` (utilizado como motor pelo pandas para lidar com tabelas temporárias)
-- `fpdf2` (para a geração de PDFs modernos)
+## Interface & Recon Terminal
+
+O software utiliza uma interface **CustomTkinter** de alto contraste, inspirada em ambientes de terminal, otimizada para longas sessões de análise de dados.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e86b97ff-7293-4d0f-8c0d-e72d41e55c55" alt="Terminal UI" width="900px">
+</div>
+
+### Recursos da UI:
+* **Terminal interativo:** Efeito de máquina de escrever para logs de processamento.
+* **Motor de busca (Ctrl+F):** Localize strings específicas dentro do payload retornado com destaque em tempo real.
+* **Barra de Status:** Acompanhamento visual de requisições e processamento de dados.
+
+---
+
+## Stack Técnica
+
+| Componente | Tecnologia | Função |
+| :--- | :--- | :--- |
+| **Linguagem** | Python 3.10+ | Core da aplicação |
+| **Interface** | CustomTkinter | UI moderna e customizável |
+| **Requisições** | Requests | Comunicação com APIs de OSINT |
+| **Processamento** | Pandas | Tratamento e achatamento de dicionários JSON |
+| **Relatórios** | fpdf2 | Geração de PDFs estruturados |
+
+---
 
 ## Instalação
 
-Abra o seu terminal ou prompt de comando e instale as dependências executando o código abaixo:
+Clone o repositório e instale as dependências necessárias:
 
 ```bash
+# Clone o projeto
+git clone [https://github.com/SanctusLocalHost/CADESP_SIDELOAD.git](https://github.com/SanctusLocalHost/CADESP_SIDELOAD.git)
+
+# Entre no diretório
+cd CADESP_SIDELOAD
+
+# Instale as dependências
 pip install customtkinter requests pandas openpyxl fpdf2
-```
-*Nota: Dependendo do sistema operacional (como distribuições Linux mais recentes), pode ser necessário usar um ambiente virtual (venv) ou adicionar a flag `--break-system-packages`.*
-
-## Como Utilizar
-
-1. Salve o código em um arquivo local, por exemplo `consulta_cadastral.py`.
-2. Execute o script através do terminal:
-
-```bash
-python consulta_cadastral.py
-```
-
-3. Na interface gráfica:
-   - Selecione no primeiro menu suspenso o tipo de chave: **CNPJ** ou **INSCRIÇÃO ESTADUAL**.
-   - Selecione a API desejada no segundo menu.
-   - Digite os números no campo de texto (pontos, barras e traços são removidos automaticamente pelo sistema).
-   - Clique no botão **EXECUTAR** ou pressione a tecla `Enter`.
-4. Aguarde a conclusão da requisição (acompanhe o status na barra inferior). Os dados aparecerão formatados na tela preta.
-5. Quando a busca for concluída com sucesso, o botão **EXPORTAR PDF** ficará verde e habilitado. Clique nele para gerar e salvar o documento na sua pasta padrão de `Downloads`.
-
-## Atalhos de Teclado
-
-- `Enter` ou `Return`: Executa a consulta após digitar o documento.
-- `Ctrl + F` (Windows/Linux) ou `Command + F` (macOS): Abre a barra de busca no terminal.
-  - `Enter` na busca: Pula para o próximo resultado.
-  - `Esc`: Fecha a barra de busca e limpa o texto destacado.
-
-## Resolução de Problemas Comuns
-
-- **Erro 429 (Muitas Requisições):** Algumas das APIs públicas limitam o número de consultas por minuto. Caso enfrente este erro, altere a API no menu suspenso (por exemplo, de BrasilAPI para ReceitaWS) e tente novamente.
-- **Timeout (Tempo Esgotado):** A resposta do servidor demorou mais de 15 segundos. Verifique sua conexão com a internet ou altere a fonte de busca.
-
-## Créditos
-
-Desenvolvimento e interface por @Sanctus_LocalHost.
