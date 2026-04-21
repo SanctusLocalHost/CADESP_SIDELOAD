@@ -4,7 +4,7 @@
 ![Language](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Focus](https://img.shields.io/badge/Focus-OSINT%20%26%20Recon-black?style=for-the-badge&logo=hackthebox&logoColor=green)
 
-**CADESP_SIDELOAD** é uma ferramenta de **OSINT (Open Source Intelligence)** focada na coleta de dados de empresas brasileiras através de múltiplas camadas de APIs públicas, estruturando payloads brutos em relatórios de inteligência.
+**CADESP_SIDELOAD** é uma ferramenta de **OSINT (Open Source Intelligence)** focada na coleta de dados de Empresas Brasileiras através de múltiplas camadas de APIs públicas, estruturando Payloads Brutos em Relatórios de Inteligência.
 
 ---
 
