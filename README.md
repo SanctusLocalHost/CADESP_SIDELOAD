@@ -19,9 +19,7 @@ Ao contrário de simples consultores cadastrais, esta ferramenta foi desenhada p
 
 ---
 
-## Interface & Recon Terminal
-
-O software utiliza uma interface **CustomTkinter** de alto contraste, inspirada em ambientes de terminal, otimizada para longas sessões de análise de dados.
+## Interface & Terminal
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/e86b97ff-7293-4d0f-8c0d-e72d41e55c55" alt="Terminal UI" width="900px">
@@ -39,7 +37,7 @@ O software utiliza uma interface **CustomTkinter** de alto contraste, inspirada 
 | Componente | Tecnologia | Função |
 | :--- | :--- | :--- |
 | **Linguagem** | Python 3.10+ | Core da aplicação |
-| **Interface** | CustomTkinter | UI moderna e customizável |
+| **Interface** | CustomTkinter | Interface |
 | **Requisições** | Requests | Comunicação com APIs de OSINT |
 | **Processamento** | Pandas | Tratamento e achatamento de dicionários JSON |
 | **Relatórios** | fpdf2 | Geração de PDFs estruturados |
