@@ -8,6 +8,14 @@
 
 ---
 
+## Interface & Terminal
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e86b97ff-7293-4d0f-8c0d-e72d41e55c55" alt="Terminal UI" width="900px">
+</div>
+
+---
+
 ## Funcionalidade
 
 Ao contrário de simples consultores cadastrais, esta ferramenta foi desenhada para fluxos de trabalho de **Ethical Hacking** e **Investigação Digital**:
@@ -18,12 +26,6 @@ Ao contrário de simples consultores cadastrais, esta ferramenta foi desenhada p
 * **Exportação Forense:** Geração de relatórios PDF organizados por categorias (Tributário, Contato, Sócios) para documentação de evidências.
 
 ---
-
-## Interface & Terminal
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/e86b97ff-7293-4d0f-8c0d-e72d41e55c55" alt="Terminal UI" width="900px">
-</div>
 
 ### Recursos da UI:
 * **Terminal interativo:** Efeito de máquina de escrever para logs de processamento.
