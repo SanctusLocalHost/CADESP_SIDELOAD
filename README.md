@@ -6,7 +6,8 @@ O Software realiza consultas de Dados Cadastrais de Empresas (contribuintes do I
 
 ## Interface
 
-<img width="1052" height="982" alt="image" src="https://github.com/user-attachments/assets/45dead14-d839-463e-9e82-35e5214b99fa" />
+<img width="1052" height="982" alt="image" src="https://github.com/user-attachments/assets/e86b97ff-7293-4d0f-8c0d-e72d41e55c55" />
+
 
 ---
 
